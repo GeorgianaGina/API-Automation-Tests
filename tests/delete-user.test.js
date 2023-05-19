@@ -12,9 +12,6 @@ describe("Delete user endpoint test suites", () => {
       .delete(`${baseUrl}/api/users/2`)
       .expectStatus(204)
       .expectResponseTime(3000);
-
-    //   await spec()
-    //   .delete(`${baseUrl}/posts/${postId}`).expectStatus(404);
   });
 
   it("Try to delete  user using a string instead of id test", async () => {

@@ -25,4 +25,12 @@ describe("Get single and list users endpoint test suites", () => {
       .expectBodyContains("Janet")
       .expectJsonSchema(getSingleUserSchema);
   });
+
+  it("Try to get list users with invalid URL test", async () => {
+    const userId = "Georgiana";
+    await spec()
+      .get(`${baseUrl}/api`)
+      .expectStatus(404)
+      .expectResponseTime(3000)
+  });
 });
