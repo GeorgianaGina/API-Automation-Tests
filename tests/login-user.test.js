@@ -9,9 +9,9 @@ describe("Login user endpoint test suites", () => {
 
   it("login user test", async () => {
     const requestBody = {
-        email : "loredana.test@gmail.com",
-        password : "Test123!",
-    };
+        "email": "eve.holt@reqres.in",
+        "password": "cityslicka"
+    }
     await spec()
       .post(`${baseUrl}/api/login`)
       .withBody(requestBody)
